@@ -8,9 +8,73 @@
 </head>
 <body>
 
-    <h3> Álcool ou Gasolina? </h3>
+    <style>
+        body{
+            background-color: rgba(52, 52, 207, 0.336);
+            color: aliceblue;
+        }
+        div{
+            border: 8px rgba(111, 0, 255, 0.363) solid;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25%;
 
+
+
+        }
+        select{
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+
+        label{
+            margin-top: 20px;
+        }
+
+    </style>
+
+<div>
+
+    <label for="weather">Álcool ou Gasolina? </label>
+    <select id="weather">
+        <option value="">Selecione</option>
+        <option value="Alcool"> Alcool </option>
+        <option value="Gasolina">Gasolina</option>
+    </select>
+
+    <p></p>
+</div>
     <script>
+
+        var select = document.querySelector("select")
+        var para = document.querySelector("p")
+        var tanque = 40;
+        var caminhoComGasolina = 480;
+        var consumoDeGasolina = caminhoComGasolina / tanque;
+        var caminhoComAlcool = 300;
+        var consumoDeAlcool = caminhoComAlcool / tanque
+
+
+        select.addEventListener('change', setWeather);
+
+        function setWeather ()  {
+        var choice = select.value;
+
+            if(choice === 'Alcool'){
+
+                para.textContent = ("O carro faz "+ consumoDeAlcool + "km por litro, com alcool")
+
+            } else{ 
+                para.textContent = ("O carro faz "+ consumoDeGasolina  + "km por litro, com alcool")
+            }
+
+
+        }
+
+
 
 
     </script>
