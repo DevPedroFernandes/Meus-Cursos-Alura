@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section>
+        <h1>
+            Em média, um casal tem filhos quando atinge a idade de 28 anos,    
+            Seguindo essa média, se os portugueses chegaram em 1500 no Brasil,
+            então, a primeira geração de brasileiros surgiu em 1528, a segunda em 1556
+            e assim por diante.
+            Desde 1500 até o ano atual, quantas gerações se passaram?
+        </h1>
+    </section>
+
+
+    <style>
+         
+         body{
+             background-color: rgba(151, 10, 64, 0.5);
+             margin-left: 15%;
+
+         }
+
+         h1{
+             font-size: 15px;
+         }
+
+         section{
+             width: 70%;
+             margin-top: 15%;
+         }
+    </style>
+
+
+    <script>
+             function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+
+            pulaLinha();
+        }
+
+        var idadeMediaQuandoTemFilhos = 28;
+        var anoAtual = 2016; 
+
+        var quantidadeDeGeracoes = Math.round((anoAtual - 1500) / idadeMediaQuandoTemFilhos);
+
+        mostra(quantidadeDeGeracoes);
+
+        
+
+
+
+    </script>
+
+
+</body>
+</html>
