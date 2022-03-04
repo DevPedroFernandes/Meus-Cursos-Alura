@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        Definir um tamanho para o qudro
+    -->
+
+    <canvas width="600px" height="400px"> </canvas>
+    
+    <script>
+
+
+            
+            //    Os atributos sempre em parenteses 
+            
+            //    Colocando o canvas em ação
+
+        var tela = document.querySelector('canvas')
+            /*
+                É um DOMString contendo o contexto identificador definindo
+                o contexto de desenho associado ao canvas.   
+
+                "2d", levando a criação de um objeto CanvasRenderingContext2D
+                representando uma  renderização bidimensional.      
+            */  
+        var pincel = tela.getContext('2d')
+
+
+        /*
+        
+            Isto é apenas um trecho de código simples usando a propriedade 
+            !! fillStyle !! para definir uma cor diferente.
+
+        */
+        pincel.fillStyle ='green';
+
+        /*        
+            pincel.fillRect(x, y, width, height);
+
+            x --- O valor da coordenada x para o ponto inicial do retângulo.
+            y --- O valor da coordenada y para o ponto inicial do retângulo.
+            width --- A largura do retângulo.
+            height --- A altura do retângulo.
+        */
+        pincel.fillRect(0, 0,600,400); 
+
+        pincel.fillStyle = 'white'
+        pincel.fillRect(200,0,600,400)
+
+        pincel.fillStyle ="red"
+        pincel.fillRect (400,0,600,400)
+
+
+
+
+    </script>    
+
+
+</body>
+</html>
